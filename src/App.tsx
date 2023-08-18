@@ -69,7 +69,6 @@ function Star() {
             <div>star</div>
             <div>star</div>
             <div>star</div>
-            <div>star</div>
         </div>
     );
 }
