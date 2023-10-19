@@ -1,0 +1,29 @@
+.onoff {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.on {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.off {
+    background-color: #FF5733;
+    color: white;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #CCC;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
