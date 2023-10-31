@@ -1,30 +1,48 @@
-import React from "react";
+import React, {useState} from "react";
 
-export function OnOff() {
+type OnOffPropsType = {
+   // on: boolean
+}
+
+export function OnOff(props: OnOffPropsType) {
+
+    let [on, setOn] = useState(false);
+
+    const onButton = {
+        width: "50px",
+        height: "40px",
+        border: "1px solid black",
+        display: "inline-block",
+        padding: "2px",
+        backgroundColor: on ? "green" : "white",
+    }
+    const offButton = {
+        width: "50px",
+        height: "40px",
+        border: "1px solid black",
+        display: "inline-block",
+        marginLeft: "3px",
+        padding: "2px",
+        backgroundColor: on ? "white" : "red",
+    }
+    const indicatorStyle = {
+        width: "10px",
+        height: "10px",
+        borderRadius: "5px",
+        border: "1px solid black",
+        display: "inline-block",
+        marginLeft: "10px",
+        backgroundColor: on ? "green" : "red",
+    }
+
     return (
         <div>
-            <div className="onoff">
-                <button className="on">On</button>
-                <button className="off">Off</button>
-                <div className="circle"></div>
-            </div>
-
+           <div style={onButton} onClick={() => {setOn(true)}}>On</div>
+           <div style={offButton} onClick={() => {setOn(false)}}>Off</div>
+           <div style={indicatorStyle}></div>
         </div>
     )
 }
 
-const onButton = document.querySelector(".on");
-const offButton = document.querySelector(".off");
-const circle = document.querySelector(".circle");
 
-onButton.addEventListener("click", () => {
-    onButton.style.backgroundColor = "#4CAF50";
-    offButton.style.backgroundColor = "";
-    circle.style.backgroundColor = "#4CAF50";
-});
 
-offButton.addEventListener("click", () => {
-    offButton.style.backgroundColor = "#FF5733";
-    onButton.style.backgroundColor = "";
-    circle.style.backgroundColor = "#FF5733";
-});
