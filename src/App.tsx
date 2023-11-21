@@ -14,13 +14,17 @@ function App() {
         <div className={"App"}>
 
             <OnOff />
-            <OnOff />
 
-            <Accordion titleValue={"Menu"} collapsed={false}/>
-            <UncontrolledAccordion titleValue={"Users"} />
+            <UncontrolledAccordion titleValue={"Menu"} />
 
             <UncontrolledRating />
-            <Rating value={3}/>
+
+
+            {/*<Rating value={3}/>*/}
+            {/*<Accordion titleValue={"Menu"} collapsed={false}/>*/}
+
+            {/*<OnOff />*/}
+            {/*<OnOff />*/}
 
             {/*<Rating value={1} />*/}
             {/*<Rating value={2} />*/}
